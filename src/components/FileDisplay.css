@@ -1,0 +1,60 @@
+.firstStep{
+    background-color: white;
+    height: 300px;
+    width: 47%;
+    padding: 10px;
+    float: left;    
+    border-radius: 10px;
+}
+
+.uploadOption{
+    float: left;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.labelStep{
+    float: left;
+    margin-top: 20px;
+}
+
+.secondStep{
+    float: left;
+    background-color: white;
+    margin-left: 37px;
+    width: 49%;
+    padding: 10px;
+    height: 300px;
+    border-radius: 10px;
+}
+.inputsName{
+    float: left;
+    width: 50%;
+}
+
+.inputs{
+    float: left;
+    width:50% ;
+    height: 50px;
+}
+
+.thirdStep{
+    float: left;
+    background-color: white;
+    margin-top: 20px;
+    width: 98.25%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.check{
+    float: left;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.displayCheck{
+    float: left;
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 1000px;
+}
