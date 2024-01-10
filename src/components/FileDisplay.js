@@ -1,8 +1,6 @@
 import React from "react";
-import {useEffect, useState} from "react";
-import Axios from "axios";
+import {useState} from "react";
 import fixedData from "../Data.js";
-import Papa from 'papaparse';
 import './FileDisplay.css';
 import './DisplayHandlingTable.css'; 
 
@@ -10,8 +8,6 @@ import './DisplayHandlingTable.css';
 export const FileDisplay = ()=>{
     const [file, setFile] = useState(null);
   // const [data, setData] = useState([]);
-  const [columns, setColumns] = useState([]);
-  const [products, setProducts] = useState([]);
 
   const handleFileUpload = (event) => {
     const uploadedFile = event.target.files[0];
@@ -19,21 +15,21 @@ export const FileDisplay = ()=>{
     if (uploadedFile) {
       const reader = new FileReader();
       reader.onload = () => {
-        const content = reader.result;
+        // const content = reader.result;
         // setData(content);
       };
       reader.readAsText(uploadedFile);
     }
   };
-  const parseFile = (content) => {
-    Papa.parse(content, {
-      header: true,
-      complete: (result) => {
-        // setData(result.data);
-        setColumns(result.meta.fields || []);
-      },
-    });
-  };
+  // const parseFile = (content) => {
+  //   Papa.parse(content, {
+  //     header: true,
+  //     complete: (result) => {
+  //       // setData(result.data);
+  //       setColumns(result.meta.fields || []);
+  //     },
+  //   });
+  // };
   const data = fixedData;
   const [availableFields, setAvailableFields] = useState(Object.keys(data.products[Object.keys(data.products)[0]]));
   const [displayedFields, setDisplayedFields] = useState([]);
